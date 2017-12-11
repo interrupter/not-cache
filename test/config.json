@@ -1,0 +1,6 @@
+{
+	"cache":{
+		"enabled": true,
+		"models": ["post", "user"]
+	}
+}
