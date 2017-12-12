@@ -1,6 +1,8 @@
 {
-	"cache":{
-		"enabled": false,
-		"models": ["post", "user"]
+	"modules":{
+		"cache":{
+			"enabled": false,
+			"models": ["post", "user"]
+		}
 	}
 }

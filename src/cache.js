@@ -7,9 +7,9 @@
 */
 const log = require('not-log')(module);
 /**
-* @const {object} config not-config.reader
+* @const {object} config not-config.readerForModule initialized with 'cache' module name
 */
-const config = require('not-config').reader;
+const config = require('not-config').readerForModule('cache');
 /**
 * @const {module} cache memory-cache module
 */
@@ -28,8 +28,8 @@ exports.returnJSON = (modelName, dataGetter, res) => {
 			res.status(200).json(data);
 		});
 	};
-	if (config.get('cache:enabled')) {
-		if (config.get('cache:models').indexOf(modelName) > -1) {
+	if (config.get('enabled')) {
+		if (config.get('models').indexOf(modelName) > -1) {
 			log.info('model (' + modelName + ') in list');
 			if (cache.keys().indexOf(modelName) > -1) {
 				log.info('return from cache');

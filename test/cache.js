@@ -22,13 +22,14 @@ describe("cache enabled", function() {
 	});
 
 	it("caching enabled, cache is exists", function() {
-		cache.returnJSON('post', (f)=>{ f([{'data':1},{'data':2},{'data':3}]);},  {
+		cache.returnJSON('post', (f)=>{
+			f([{'data':1}, {'data':2}, {'data':3}]);
+		},  {
 			status(param){ return this;},
 			json(data){
 				expect(data).to.be.deep.equal([{'data':1},{'data':2}]);
 			}
 		});
-
 	});
 
 	it("caching enabled, model is not listed for caching", function() {
