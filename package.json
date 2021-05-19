@@ -31,10 +31,10 @@
 	"devDependencies": {
 		"chai": "*",
 		"chai-as-promised": "*",
-		"eslint": "^4.13.1",
+		"eslint": "^7.26.0",
 		"ink-docstrap": "^1.3.2",
 		"istanbul": "*",
-		"jsdoc": "^3.5.5",
+		"jsdoc": "^3.6.7",
 		"mocha": "*"
 	}
 }
